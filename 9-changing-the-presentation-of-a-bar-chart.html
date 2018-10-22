@@ -4,6 +4,7 @@
     .bar {
       width: 25px;
       height: 100px;
+      margin: 2px;
       display: inline-block;
       background-color: blue;
     }
@@ -18,7 +19,7 @@
         .append("div")
         .attr("class", "bar")
   
-        .style("height", (num) => num + "px")
+        .style("height", (num) => (10 * num + "px"))
         
     </script>
   </body>
