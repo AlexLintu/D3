@@ -1,0 +1,16 @@
+<script src="https://d3js.org/d3.v5.min.js"></script>
+
+<body>
+    <script>
+      const scale = d3.scaleLinear();
+      // The `domain` covers the set of input values - data set range
+      // The `range` covers the set of output values - SVG area dimentions
+        scale.domain([250, 500])
+             .range([10, 150]);
+          
+      const output = scale(50);
+      d3.select("body")
+        .append("h2")
+        .text(output);
+    </script>
+  </body>
