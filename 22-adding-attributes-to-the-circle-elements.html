@@ -15,6 +15,7 @@
                     [ 21,    123 ]
                   ];
       
+      
       const w = 500;
       const h = 500;
       
@@ -22,12 +23,16 @@
                     .append("svg")
                     .attr("width", w)
                     .attr("height", h);
-                    
-      // Creating `circle` elements for each point in the `dataset` and appending them to the SVG area:
+      
       svg.selectAll("circle")
          .data(dataset)
          .enter()
          .append("circle")
-           
+         
+        // Positioning circle elements:
+         .attr("cx", (d, i) => d[0])
+         .attr("cy", (d, i) => h - d[1])
+         .attr("r", 5)
+    
     </script>
   </body>
