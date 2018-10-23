@@ -1,0 +1,13 @@
+<script src="https://d3js.org/d3.v5.min.js"></script>
+
+<body>
+    <script>
+      const positionData = [[1, 7, -4],[6, 3, 8],[2, 8, 3]]
+      // Comparing `z` position, numbers -4, 8 and 3:
+      const output = d3.max(positionData, (d) => d[2]); // Output: 8
+      
+      d3.select("body")
+        .append("h2")
+        .text(output)
+    </script>
+  </body>
